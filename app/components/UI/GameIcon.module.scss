@@ -1,0 +1,33 @@
+.bar{
+    width: 98%;
+    height: 8rem;
+    background: rgba(44, 44, 44, 0.849);
+    // border-radius: 1rem;
+    border: 1px solid rgb(0, 247, 255);
+    box-shadow: 0 0 2px 2px black;
+    display: flex;
+    align-items: center;
+    
+}
+.icon{
+    transition: all 0.2s ease-out;
+    width: 8%;
+    height:90%;
+    margin-left: 1%;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.288);
+    border-radius: 5px;
+    border: 1px solid blue;
+    box-shadow: 0 0 2px 2px black;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.712);
+        background-size: 100%;
+    }
+    &--selected{
+        background-color: rgba(255, 255, 255, 0.712);
+        background-size: 100%;
+    }
+}

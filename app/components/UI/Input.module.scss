@@ -1,0 +1,45 @@
+@import '../../mixins';
+$f: 3rem;
+.inp{
+    width:40rem;
+    background: rgba(0, 0, 0, 0.493);
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid black;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 3px 3px rgb(255, 0, 0);
+}
+
+.label{
+    font-size: $f;
+    color: white;
+    @include t-shadow(black,7px);
+    width: 100%;
+text-align: center;
+
+}
+
+.input{
+    width: 70%;
+    font-size: $f;
+    font-family: Poof;
+    border: 5px groove rgb(0, 162, 255);
+    box-shadow: 0 0 4px 4px black;
+    text-align: center;
+    background: rgb(226, 226, 226);
+
+}
+
+// .validator{
+//     position: absolute;
+//     width: 100px;
+//     height: 20px;
+//     background: red;
+// }
+// .valid{
+//     background: red;
+// }
+// .invalid{
+//     background: red;
+// }

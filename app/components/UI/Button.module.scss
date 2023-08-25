@@ -1,0 +1,52 @@
+$main-width: 225px;
+ 
+
+.btn{
+    position: relative;
+    width: $main-width;
+    height: 40px;
+    border: 3px groove lightslategrey;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-family: inherit;
+    margin:.5%;
+    z-index: 3;
+    box-sizing: border-box;
+    border-radius:5px;
+    font-size: 1.5rem;
+    box-shadow: 0 0 2px 2px black;
+    box-sizing: border-box;
+    background: url('../../../public/pictures/decorations/shards.png');
+    background-color: white;
+    &:hover{
+        background-color: aqua;
+        box-shadow: 0 0 2px 5px black;
+        font-size: 1.6rem;
+       
+    }
+    &:active{
+        background-color: rgb(255, 0, 128);
+        font-size: 1.7rem;
+    
+    }
+}
+
+
+
+.decor{
+    transition: all .2s ease-out;
+    position: absolute;
+    width: $main-width /10;
+    transform: translate(-50%,-50%);
+    border-radius: 100%;
+    height: 60%;
+    background: rgb(255, 0, 0);
+    top: 0%;
+    border: 3px groove lightslategrey;
+    background: white;
+}
+.decorHover{
+    width: $main-width /8;
+    height:80%;
+    background: rgb(0, 195, 255);
+}

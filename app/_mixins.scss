@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Poof;
+    src: url('../app/assets/fonts//Showcard\ Gothic\ Regular.ttf');
+  }
+
+@mixin t-shadow($color,$px){
+    text-shadow: 0 0 $px $color,0 0 $px $color,0 0 $px $color,0 0 $px $color;
+}
+
+@mixin moving-text($first,$last,$sec){
+    
+    @keyframes moving {
+        0%{
+            font-size: $first;
+        }
+        50%{
+            font-size: $last;
+        }
+        100%{
+            font-size: $first;
+        }
+    }
+    animation: moving $sec infinite ease-out;
+}
+
+@mixin moving-shadow($sec){
+
+    @keyframes shadows{
+        0%{
+            filter: drop-shadow(0 10px 3px black);
+        }
+        33%{
+            filter: drop-shadow(-10px 0px 3px black);
+        }
+        66%{
+            filter: drop-shadow(10px -10px 3px black);
+        }
+        100%{
+            filter: drop-shadow(0px 10px 3px black);
+        }
+    }
+    animation: shadows $sec infinite ease-out;
+
+}
+
+@mixin moving-back($sec){
+
+    @keyframes mov{
+        0%{
+            filter: saturate(.7) brightness(1);
+            background-size: 200%;
+            background-position: left;
+     
+        }
+   
+        20%{
+            background-size: 100%;
+            background-position: center;
+        }
+        40%{
+            background-size: 200%;
+            background-position: right;
+            filter: saturate(1.5) brightness(1.5);
+        }
+        60%{
+            background-size: 100%;
+            background-position: bottom;
+        }
+        80%{
+            background-size: 200%;
+            background-position: top;
+        }
+        100%{
+            background-size: 200%;
+            background-position: left;
+            filter: saturate(.7) brightness(1);
+     
+        }
+    }
+    animation: mov $sec infinite ease-out;
+}
+
+@mixin flex(){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

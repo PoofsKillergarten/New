@@ -1,0 +1,27 @@
+@import '../../mixins';
+
+.footer{
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(cyan,darkcyan,cyan);
+
+    position: absolute;
+    z-index: 0;
+    bottom: -79%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dec{
+    width: 100%;
+    height: 100%;
+    background: url('/pictures/decorations/shards.png') center/50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3rem;
+    color:white;
+    @include t-shadow(black,5px);
+    @include moving-text(3rem,4rem,5s);
+}

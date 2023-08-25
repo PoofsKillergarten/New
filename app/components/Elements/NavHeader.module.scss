@@ -1,0 +1,52 @@
+@import '../../mixins';
+
+.header{
+    font-family: Poof;
+    letter-spacing: 3px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    @include t-shadow(black, 5px);
+    background-color: darkcyan;
+    background: linear-gradient(cyan,darkcyan,cyan);
+    position: fixed;
+    width: 98%;
+    z-index: 999;
+    margin-top: .2%;
+    left:50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+
+    
+}
+
+.navbar{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+.nav{
+    cursor: pointer;
+    padding-top: 1%;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 1%;
+    &:hover{
+        background-color: rgba(128, 0, 128, 0.226);
+    }
+    &:active{
+        background-color: rgba(255, 0, 255, 0.5);
+    }
+}
+
+
+.nevry{
+    cursor: pointer;
+
+    &:hover{
+        @include moving-shadow(2s);
+    }
+}

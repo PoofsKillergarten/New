@@ -1,0 +1,68 @@
+@import '../mixins';
+
+$wh: rgba(255, 255, 255, 0.685);
+$brd : 2px solid black;
+
+.container1{
+
+    width: 30%;
+    height: 80%;
+    background: $wh;
+    box-shadow: 0 0 5px 5px $wh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    border-right: 5px groove red;
+    border-top: 5px groove red;
+}
+
+.container2{
+    border-top-left-radius: 5%;
+    box-shadow: 0 0 5px 5px $wh;
+    width: 68%;
+    height: 95%;
+    background: $wh;
+ 
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.link{
+    border-bottom: 1px solid black;
+    text-align: center;
+    transition: all .2s ease-in;
+    margin-top:5%;
+    color: rgb(0, 255, 255);
+    @include t-shadow(black, 5px);
+    font-size: 1.5rem;
+    cursor: pointer;
+    &::first-letter{
+        z-index: 99;
+        color:red;
+        font-size: 2rem;
+    }
+    
+    &::before{
+        content: '* ';
+       
+    }
+    &::after{
+        content: ' ▶️';
+        @include t-shadow(black, 1px);
+    } 
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    &--spec{
+        color:gold;
+    }
+}   

@@ -1,0 +1,363 @@
+@import '../mixins';
+
+$wh: rgba(255, 255, 255, 0.438);
+$brd : 2px solid black;
+
+
+.title{
+    z-index: 99;
+    position: absolute;
+    transform: skew(10deg);
+    // width: 100%;
+    @include moving-shadow(5s);
+}
+
+.guide-container{
+    width: 100%;
+    height: 100%;
+   @include flex();
+   flex-wrap: wrap;
+//    background: red;
+   z-index: 9;
+
+   overflow-y: scroll;
+}
+
+.mini-guide{
+    transition: all .2s ease-out;
+    width: 20%;
+    height: 40%;
+    margin: 1%;
+    background: linear-gradient(white,gray);
+    box-sizing: border-box;
+    border:4px groove rgba(0, 0, 0, 0.719);
+    padding: .5%;
+    cursor: pointer;
+    box-shadow: 0 0 2px 2px aqua;
+    &:hover{
+        transform: scale(1.05);
+  
+        filter: contrast(2);
+        box-shadow: 0 0 4px 4px aqua;
+      
+    }
+    &:active{
+        filter: contrast(5);
+   
+    }
+}
+.guide-img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(107, 70, 0, 0.438);
+ 
+
+}
+
+.return{
+    position: fixed;
+    color:red;
+    @include t-shadow(black,5px);
+    font-size: 3rem;
+    z-index: 99;
+    margin:1%;
+    background: rgba(0, 0, 0, 0.486);
+    padding: .5%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modalGuide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+}
+
+.modalGuideImg{
+
+    border: 2px solid black;
+    box-shadow: 0 0 2px 2px white;
+    background: linear-gradient(white,grey);
+    transition: all .3s ease-out;
+    &:hover{
+        transform: scale(1.05);
+  
+        filter: contrast(2);
+        box-shadow: 0 0 4px 4px aqua;
+    }
+}
+.modalGuideDesc{
+    border: 1px solid black;
+    width: 90%;
+    height: 90%;
+    background: rgba(200,255,0,.5);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+    box-shadow: 0 0 2px 5px violet;
+
+  
+}
+.modalGuideCont{
+    width: 80%;
+    height: 15rem;
+    margin-top: 3%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+    box-shadow: 0 0 2px 2px white;
+    transition: all .3s ease-out;
+    &:hover{
+        transform: scale(1.05);
+  
+        filter: contrast(2);
+        box-shadow: 0 0 4px 4px aqua;
+    }
+}
+
+.container1{
+    z-index: 1;
+    width: 95%;
+    height: 80%;
+    background: $wh;
+    border: 5px solid white;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    align-items: center;
+    box-shadow: 0 0 5px 5px $wh;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.mini-character{
+    transition: all .2s ease-out;
+    width: 15%;
+    height: 40%;
+    margin: 1%;
+    background: linear-gradient(white,gray);
+    box-sizing: border-box;
+    border:4px groove rgba(0, 0, 0, 0.719);
+    padding: .5%;
+    cursor: pointer;
+    box-shadow: 0 0 2px 2px aqua;
+    &:hover{
+        transform: scale(1.05);
+  
+        filter: contrast(2);
+        box-shadow: 0 0 4px 4px aqua;
+      
+    }
+    &:active{
+        filter: contrast(5);
+   
+    }
+}
+.character-img{
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    // background-color: rgba(107, 70, 0, 0.438);
+    filter: drop-shadow(0 2px 3px black);
+}
+
+
+.modalCharacter{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    // flex-wrap: wrap;
+    
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    top: 20%;
+    left: 20%;
+
+  
+}
+
+.modalCharacterImg{
+   
+    border: 2px solid black;
+    box-shadow: 0 0 2px 2px white;
+    background: linear-gradient(white,grey);
+    margin-right:2%;
+    transition: all .3s ease-out;
+    width: 25%;
+    left: -20%;
+    position: absolute;
+    &:hover{
+        transform: scale(1.05);
+  
+        filter: contrast(2);
+        box-shadow: 0 0 4px 4px aqua;
+    }
+}
+.modalCharacterDesc{
+    border: 1px solid black;
+    width: 32%;
+    height: 90%;
+    background: rgba(200,255,0,.5);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    box-shadow: 0 0 2px 5px violet;
+
+  
+}
+.modalCharacterCont{
+    width: 200%;
+    height: 120%;
+    margin-top: 3%;
+    background: url('../../public/pictures/decorations/shards.png');
+    background-color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+align-self: flex-start;
+    box-shadow: 0 0 2px 2px white;
+    margin-top: -.1%;
+    transition: all .3s ease-out;
+    margin-left: 8%;
+    // &:hover{
+    //     transform: scale(1.05);
+  
+    //     filter: contrast(2);
+    //     box-shadow: 0 0 4px 4px aqua;
+    // }
+}
+
+.gameTitle{
+width: 100%;
+background: rgba(0, 0, 0, 0.521);
+padding: 2%;
+color: gold;
+@include t-shadow(black, 5px);
+border-bottom-left-radius: 100%;
+border-bottom-right-radius: 100%;
+border-top: 2px solid black;
+}
+.skills{
+    width: 100%;
+    height: 90%;
+    margin-top: 1%;
+    display: flex;
+    overflow-y: scroll; 
+
+    flex-direction: column
+}
+.skill{
+    @include flex();
+    width: 97%;
+    background: url('../../public/pictures/decorations/shards.png') center/cover no-repeat;
+    background-color: rgb(0, 119, 255);
+    padding: 1.5%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin:1%;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 2px 2px black;
+       
+        filter: brightness(1.3);
+        & .skillPic {
+           transform: scale(1.5);
+        }
+    }
+}
+
+
+.skillPic{
+    transition: all .2s ease-out;
+    width: 10%;
+    background: url('https://png.pngtree.com/png-vector/20220926/ourmid/pngtree-shiny-gold-star-clipart-illustration-design-png-image_6216956.png') center/100% no-repeat;
+    height: 100%;
+    filter: drop-shadow(0 0 4px black);
+}
+.skillName{
+    width: 50%;
+    color: white;
+    @include t-shadow(black, 5px);
+    &--smaller{
+        font-size: 1rem;
+    }
+ 
+}
+.skillCost{
+    width: 20%;
+    @include t-shadow(black, 5px);
+    color: aqua;
+    background: rgba(0, 0, 0, 0.507);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.skillLevel{
+    width: 20%;
+    background: rgba(255, 217, 0, 0.507);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+}
+
+.nametag{
+    color:rgb(0, 0, 0);
+    @include t-shadow(rgba(139, 232, 255, 0.664), 5px);
+    background: rgba(0, 0, 0, 0.548);
+    padding: 2%;
+    font-size: 1.3rem;
+    z-index: 4;
+    text-align: center;
+
+    &--inner{
+        position: absolute;
+        width: 25%;
+        left: -20%;
+        bottom: 20%;
+        padding: 1%;
+        font-size: 3rem;
+        color: white;
+        @include t-shadow(black, 5px);
+    }
+}
+
+.skillDesc{
+    width: 25%;
+    // height: 38%;
+
+    position: absolute;
+    left: -20%;
+    top: 90%;
+    border: 2px solid black;
+    box-shadow: 0 0 2px 2px white;
+    background: linear-gradient(white,grey);
+    padding: 2%;
+    font-size: 1.5rem;
+}

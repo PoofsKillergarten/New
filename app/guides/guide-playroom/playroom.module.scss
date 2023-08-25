@@ -1,0 +1,119 @@
+@import '../../mixins';
+
+.playroomtainer{
+    width: 100%;
+    height: 100%;
+    @include flex();
+    flex-direction: column;
+}
+.playroom1{
+    color:white;
+    @include t-shadow(black,5px);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.548);
+    padding: 1%;
+    border-radius: 15px;
+    border-bottom: 5px solid black;
+}
+.playroom2{
+    width: 100%;
+    height: 90%;
+    background: rgba(165, 42, 42, 0.384);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @include flex();
+}
+
+.stepFrame{
+    position: relative;
+    height: 95%;
+    width: 23%;
+    // background: white;
+    @include flex();
+    flex-direction: column;
+
+    &:hover{
+        & .stepImg{
+            transform: rotate(-2deg);
+        }
+        & .stepDesc{
+            transform: rotate(2deg);
+        }
+        & .number{
+          transform: scale(.5);
+        }
+    }
+}
+
+.stepTitle{
+    width: 96%;
+    // background: black;
+    // color:white;
+    font-size: 2rem;
+    text-align: center;
+    background: white;
+    border: 2px solid black;
+    border-radius: 100px;
+}
+.stepImg{
+    transition: all .2s ease-out;
+    width: 96%;
+    height: 47%;
+    border: 2px solid black;
+    background-position: center;
+    background-size: cover;
+    transform: rotate(2deg);
+}
+
+.stepDesc{
+    transition: all .2s ease-out;
+    width: 96%;
+    height: 47%;
+
+    font-size: 1.2rem;
+    background: wheat;
+    transform: rotate(-2deg);
+    @include flex();
+    padding: 15%;
+    box-shadow: 0 0 2px 2px black   ;
+}
+
+.number{
+    transition: all .2s ease-out;
+    z-index: 4;
+    position: absolute;
+    color: white;
+    @include t-shadow(black,5px);
+    font-size: 3rem;
+    background: linear-gradient(124deg, white, rgb(75, 75, 75));
+    padding: 10%;
+    width: 1%;
+    height: 1%;
+    border-radius: 1000px;
+    @include flex();
+    border: 2px solid black;
+    box-shadow: 0 0 2px 2px aqua;
+    bottom: -7%;
+    left: -5%;
+}
+.arrow{
+    z-index: 4;
+    position: absolute;
+    color: red;
+    @include t-shadow(white,5px);
+    font-size: 5rem;
+  
+    padding: 10%;
+    width: 1%;
+    height: 1%;
+    border-radius: 1000px;
+    @include flex();
+ 
+    top:25%;
+    left: -15%;
+
+    &--bot{
+        top: 55%;
+        color: blue;
+    }
+}

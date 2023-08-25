@@ -1,0 +1,12 @@
+@import '../../mixins';
+
+.background{
+    // position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: .9;
+    @include moving-back(40s);
+    box-shadow: 0 0 3px 3px blue;
+}

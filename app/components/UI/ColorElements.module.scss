@@ -1,0 +1,26 @@
+@import '../../mixins';
+.color-elem{
+    color:white;
+    @include t-shadow(black,5px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    
+}
+.wrapper{
+    z-index: 1;
+   
+    margin: 1%;
+    transition: all .2s ease-out;
+    padding: .5%;
+    display: flex;
+    box-shadow: 0 0 2px 2px black;
+    box-sizing: border-box;
+    cursor:pointer;
+   
+    &:hover{
+        filter: brightness(1.5);
+        box-shadow: 0 0 4px 4px black;
+    }
+}

@@ -1,0 +1,7 @@
+@import '../../mixins';
+
+.img{
+    transition: all .2s ease-out;
+    @include moving-shadow(5s);
+
+}

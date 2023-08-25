@@ -1,0 +1,35 @@
+@import '../../mixins';
+.iframe{
+
+    transform: scale(1);
+    border: 5px groove rgb(255, 255, 255);
+    box-shadow: 0 0 2px 2px black;
+    z-index: 2;
+
+    &:hover{
+        filter:brightness(1.5);
+        
+        cursor:pointer;
+    }
+}
+
+.decor{
+    transition: all .2s ease-out;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    border-radius: 100%;
+    width: 5rem;
+    z-index: 999;
+    height: 5rem;
+    background: rgb(255, 0, 0);
+    top: 0%;
+    border: 3px groove lightslategrey;
+    background: white;
+    box-shadow: 0 0 2px 2px black;
+}
+.decorHover{
+
+    height:80%;
+    background: rgb(0, 195, 255);
+   
+}

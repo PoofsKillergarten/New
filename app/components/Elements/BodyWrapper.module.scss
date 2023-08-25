@@ -1,0 +1,46 @@
+@import '../../mixins';
+
+
+  
+  .body{
+    font-family:Poof;
+    position: absolute;
+    padding-top: 5%;
+    width: 100%;
+  
+  
+    background: url('../../../public/pictures/backgrounds/mozaic.png');
+    background-size: 100%;
+  }
+
+  .skull{
+    width: 4rem;
+    height: 4rem;
+    background: url('../../../public/pictures/icons/doom.png') center/150% no-repeat;
+    margin:1%;
+    border-radius: 100%;
+    border:1px solid black;
+    box-shadow: 0 0 2px 2px rgb(0, 204, 255);
+    transition: all .3s ease-out;
+  }
+
+  .skullbar{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.63);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 2%;
+    display: flex;
+  }
+  .name{
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 1px;
+    @include t-shadow(black,3px);
+  }
+  .container{
+    width: 100%;
+    position: relative;
+  }
